@@ -71,6 +71,9 @@ export default function App() {
                   {parseFloat(day.temp.day).toFixed(0)}°
                 </Text>
                 <Text style={styles.desc}>{day.weather[0].main}</Text>
+                <Text style={styles.tinyDesc}>
+                  {day.weather[0].description}
+                </Text>
                 {day.weather[0].main === 'Rain' && (
                   <Text style={styles.weatherIcon}>🌧</Text>
                 )}
@@ -137,6 +140,10 @@ const styles = StyleSheet.create({
     marginTop: -10,
     fontSize: 32,
     color: 'white',
+  },
+  tinyDesc: {
+    color: 'white',
+    fontSize: 15,
   },
   weatherIcon: {
     fontSize: 50,
